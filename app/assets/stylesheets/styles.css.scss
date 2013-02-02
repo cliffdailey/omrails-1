@@ -2,14 +2,14 @@
 $baseFontFamily: Oxygen;
 
 @import url(http://fonts.googleapis.com/css?family=Oxygen);
-@import url(http://fonts.googleapis.com/css?family=Josefin+Slab:400,700);
+@import url(http://fonts.googleapis.com/css?family=Londrina+Sketch);
 
 /* CSS Variables */
+$btnPrimaryBackground: green;
 $navbarBackgroundHighLight: white;
 $navbarBackground: white;
 $lightteal: #5CCCCC;
 $linkteal: #006363;
-$heroUnitBackground: #5D9B4A;
 
 /* Import bootstrap files */
 @import 'bootstrap';
@@ -37,27 +37,29 @@ a {
 
 /* Hero Unit Styles */
 .hero-unit {
+	background-color: #5D9B4A;
+	background-image: url(/assets/grid_overlay.png);
+	height: 150px !important;
 	h1 { 
-		font-family: 'Josefin Slab', serif;
+		font-family: 'Londrina Sketch', serif;
 		font-weight: 400;
+		font-size: 4em;
 		color: white;		
-		text-transform: uppercase;
 		display: inline;
 	}
 	span {
-		font-family: 'Josefin Slab', serif;
-		font-size: 3em;
-		font-weight: 700;
+		font-family: 'Londrina Sketch', serif;
+		font-size: 6em;
 		text-transform: uppercase;
 		color: #ECDEB7;
 	}
 	p {
 		color: white;
-	}
-
-	.btn {
-		margin-top: 1.5em !important;
-	}
+		margin-top: 1.25em;
+		a {
+			font-family: $baseFontFamily;
+		}
+	}	
 }
 /* Footer Styles */
 .footer {
