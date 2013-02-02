@@ -1,21 +1,65 @@
+/* Import fonts */
 $baseFontFamily: Oxygen;
+
 @import url(http://fonts.googleapis.com/css?family=Oxygen);
-$btnPrimaryBackground: green;
+@import url(http://fonts.googleapis.com/css?family=Josefin+Slab:400,700);
+
+/* CSS Variables */
 $navbarBackgroundHighLight: white;
 $navbarBackground: white;
+$lightteal: #5CCCCC;
+$linkteal: #006363;
+$heroUnitBackground: #5D9B4A;
 
+/* Import bootstrap files */
 @import 'bootstrap';
 @import 'bootstrap-responsive';
 
-.navbar-inner {
-	@include box-shadow(none !important);
-	border: 0;
-}
+/* General Styles */
 
 body {
 	padding-top: 60px;
 }
 
+a {
+	color: #ECDEB7;
+}
+
+/* Bootstrap overrides */
+.navbar-inner {
+	@include box-shadow(none !important);
+	border: 0;
+}
+
+/* Header Styles */
+
+
+
+/* Hero Unit Styles */
+.hero-unit {
+	h1 { 
+		font-family: 'Josefin Slab', serif;
+		font-weight: 400;
+		color: white;		
+		text-transform: uppercase;
+		display: inline;
+	}
+	span {
+		font-family: 'Josefin Slab', serif;
+		font-size: 3em;
+		font-weight: 700;
+		text-transform: uppercase;
+		color: #ECDEB7;
+	}
+	p {
+		color: white;
+	}
+
+	.btn {
+		margin-top: 1.5em !important;
+	}
+}
+/* Footer Styles */
 .footer {
 	margin-top: 50px;
 	color: $grayLight;
