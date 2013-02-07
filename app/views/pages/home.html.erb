@@ -1,14 +1,18 @@
-<div class="hero-unit">	
-	<h1>quick</h1><span>pins <%= image_tag '/assets/thumbtack4.png', class: 'logo-img' %></span>
-	<p>
-		Welcome to
-		<%= link_to 'QuickPins!', 'http://onemonthrails.com' %>
+<% if user_signed_in? %>
+	<h1>You're logged in! </h1>
+<% else %>
+	<div class="hero-unit">	
+		<h1>quick</h1><span>pins <%= image_tag '/assets/thumbtack4.png', class: 'logo-img' %></span>
+		<p>
+			Welcome to
+			<%= link_to 'QuickPins!', 'http://onemonthrails.com' %>
 
-		Click the button below to sign up and start pinning!
-	</p>
-	<p>
-		<%= link_to 'Sign Up Now!', '#', class: 'btn btn-primary btn-large' %>
-	</p>
-</div>
+			Click the button below to sign up and start pinning!
+		</p>
+		<p>
+			<%= link_to 'Sign Up Now!', new_user_registration_path, class: 'btn btn-primary btn-large' %>
+		</p>
+	</div>
+<% end %>
 
 
