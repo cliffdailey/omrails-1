@@ -31,10 +31,6 @@ body {
 	padding-top: 60px;
 }
 
-a {
-	color: #ECDEB7;
-}
-
 /* Bootstrap overrides */
 .navbar-inner {
 	@include box-shadow(none !important);
@@ -68,8 +64,9 @@ a {
 		margin-top: 1.25em;
 		a {
 			font-family: $baseFontFamily;
+			color: #ECDEB7;
 		}
-	}	
+	}
 }
 /* Footer Styles */
 .footer {
