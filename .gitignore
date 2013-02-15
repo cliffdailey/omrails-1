@@ -16,3 +16,6 @@
 
 #Ignore paperclip uploaded files
 /public/system
+
+#Ignore s3 credentials yml
+/config/s3.yml
