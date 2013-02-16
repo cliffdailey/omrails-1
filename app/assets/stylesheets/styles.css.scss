@@ -1,5 +1,6 @@
 /* fonts */
 @import url(http://fonts.googleapis.com/css?family=Satisfy);
+@import url(http://fonts.googleapis.com/css?family=Oswald);
 $baseFontFamily: Oxygen;
 @font-face {
     font-family: 'londrina_sketchregular';
@@ -16,10 +17,11 @@ $baseFontFamily: Oxygen;
 @import url(http://fonts.googleapis.com/css?family=Oxygen);
 
 /* CSS Variables */
-$btnPrimaryBackground: #357DD8;
+$btnPrimaryBackground: #0F851C;
 $navbarBackgroundHighlight: #EEDFB7;
 $navbarBackground: #EEDFB7;
 $navbarLinkColor: #A75521;
+$navbarLinkColorHover: #A75521;
 $lightteal: #5CCCCC;
 $linkteal: #006363;
 
@@ -33,9 +35,9 @@ body {
 	padding-top: 60px;
 	background-color: #E8B36D;
 }
-.brand {
-	font-family: 'Satisfy', cursive;
-	font-size: 30px !important;
+
+.plus-brown {
+	margin-top: -5px;
 }
 
 /* Bootstrap overrides */
@@ -43,10 +45,31 @@ body {
 	@include box-shadow(none !important);
 	border: 0;
 }
+.well {
+	margin-top: 20px;
+	background-color: #EEDFB7;
+}
+.brand {
+	font-family: 'Satisfy', cursive;
+	font-size: 30px !important;
+}
 
-/* Header Styles */
+/* Typography */
 
+h2 {
+	font-family: 'Oswald', sans-serif;
+	font-weight: normal;
+	font-size: 3em;
+	color: white;
+}
 
+/* Forms */
+.form-actions {
+	background-color: #E8B36D;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
 
 /* Hero Unit Styles */
 .hero-unit {
@@ -115,7 +138,9 @@ body {
 }
 
 .description {
-	margin: 10px 5px;
+	text-align: center;
+	font-style: italic;
+	margin-bottom: 20px;
 }
 
 /* Media Queries */
