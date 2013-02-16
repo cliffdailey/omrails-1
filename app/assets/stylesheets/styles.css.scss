@@ -1,4 +1,5 @@
 /* fonts */
+@import url(http://fonts.googleapis.com/css?family=Satisfy);
 $baseFontFamily: Oxygen;
 @font-face {
     font-family: 'londrina_sketchregular';
@@ -15,9 +16,10 @@ $baseFontFamily: Oxygen;
 @import url(http://fonts.googleapis.com/css?family=Oxygen);
 
 /* CSS Variables */
-$btnPrimaryBackground: green;
-$navbarBackgroundHighLight: white;
-$navbarBackground: white;
+$btnPrimaryBackground: #357DD8;
+$navbarBackgroundHighlight: #EEDFB7;
+$navbarBackground: #EEDFB7;
+$navbarLinkColor: #A75521;
 $lightteal: #5CCCCC;
 $linkteal: #006363;
 
@@ -29,6 +31,11 @@ $linkteal: #006363;
 
 body {
 	padding-top: 60px;
+	background-color: #E8B36D;
+}
+.brand {
+	font-family: 'Satisfy', cursive;
+	font-size: 30px !important;
 }
 
 /* Bootstrap overrides */
@@ -43,21 +50,24 @@ body {
 
 /* Hero Unit Styles */
 .hero-unit {
-	background-color: #5D9B4A;
+	background-color: #A75521;
 	background-image: url(/assets/grid_overlay.png);
-	min-height: 150px !important;
+	min-height: 100px !important;
+	padding-top: 35px;
+	padding-bottom: 20px;
+	box-shadow: 4px 4px 8px #444;
 	h1 { 
 		font-family: 'londrina_sketchregular', serif;
 		font-weight: 400;
 		font-size: 4em;
-		color: white;		
+		color: #EEDFB7;		
 		display: inline;
 	}
 	span {
 		font-family: 'londrina_sketchregular', serif;
 		font-size: 6em;
 		text-transform: uppercase;
-		color: #ECDEB7;
+		color: #EEDFB7;
 	}
 	p {
 		color: white;
