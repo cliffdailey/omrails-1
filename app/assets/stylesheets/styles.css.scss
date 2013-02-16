@@ -81,9 +81,12 @@ body {
 /* Footer Styles */
 .footer {
 	margin-top: 50px;
-	color: $grayLight;
+	background-color: #A75521;
+	min-height: 100px;
+	color: white;
+	padding-top: 10px;
 	a {
-		color: $gray;
+		color: #EEDFB7;
 	}
 }
 
@@ -130,3 +133,6 @@ body {
 @media screen and (max-width: 655px) {
 	.logo-img { display: none; }
 }
+
+
+
