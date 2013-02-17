@@ -1,6 +1,7 @@
 class Pin < ActiveRecord::Base
   attr_accessible :description, :image
 
+  
   validates :description, presence: true
   validates :user_id, presence: true
   validates_attachment :image, presence: true,
@@ -8,6 +9,8 @@ class Pin < ActiveRecord::Base
   														 size: { less_than: 5.megabytes }
 
   belongs_to :user
-  has_attached_file :image, :storage => :s3, :s3_credentials => S3_CREDENTIALS, styles: { medium: '320x240>', thumb: '100x100>'}
+  has_attached_file :image, :storage => :s3, :s3_credentials => S3_CREDENTIALS, styles: { large: '600x400>', medium: '320x240>', thumb: '100x100>'}
   
+  
+
 end

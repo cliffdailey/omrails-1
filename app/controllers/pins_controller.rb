@@ -1,5 +1,5 @@
 class PinsController < ApplicationController
-  before_filter :authenticate_user!, except: [:index]
+  before_filter :authenticate_user!, except: [:index, :show]
 
 
   # GET /pins
@@ -16,10 +16,11 @@ class PinsController < ApplicationController
   # GET /pins/1
   # GET /pins/1.json
   def show
-    @pin = current_user.pins.find(params[:id])
+    @pin = Pin.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
+      format.js
       format.json { render json: @pin }
     end
   end

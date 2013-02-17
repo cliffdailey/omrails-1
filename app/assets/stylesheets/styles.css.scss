@@ -1,6 +1,7 @@
 /* fonts */
 @import url(http://fonts.googleapis.com/css?family=Satisfy);
 @import url(http://fonts.googleapis.com/css?family=Oswald);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
 $baseFontFamily: Oxygen;
 @font-face {
     font-family: 'londrina_sketchregular';
@@ -53,6 +54,11 @@ body {
 	font-family: 'Satisfy', cursive;
 	font-size: 30px !important;
 }
+
+
+/* Sticky Sidebar */
+
+
 
 /* Typography */
 
@@ -156,8 +162,9 @@ h2 {
 	}
 }
 @media screen and (max-width: 655px) {
-	.logo-img { display: none; }
+	.logo-img { display: none; }	
 }
+
 
 
 
