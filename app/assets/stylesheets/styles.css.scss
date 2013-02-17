@@ -177,6 +177,11 @@ h2 {
 }
 
 /* Media Queries */
+@media screen and (max-width: 979px) {
+	body {
+		padding-top: 0;
+	}
+}
 
 @media screen and (max-width: 490px) {
 	.hero-unit {
