@@ -1,5 +1,5 @@
 /* fonts */
-@import url(http://fonts.googleapis.com/css?family=Satisfy);
+@import url(http://fonts.googleapis.com/css?family=Rock+Salt);
 @import url(http://fonts.googleapis.com/css?family=Oswald);
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
 $baseFontFamily: Oxygen;
@@ -25,6 +25,7 @@ $navbarLinkColor: #A75521;
 $navbarLinkColorHover: #A75521;
 $lightteal: #5CCCCC;
 $linkteal: #006363;
+$navbarHeight: 50px;
 
 /* Import bootstrap files */
 @import 'bootstrap';
@@ -33,7 +34,7 @@ $linkteal: #006363;
 /* General Styles */
 
 body {
-	padding-top: 60px;
+	padding-top: 80px;
 	background-color: #E8B36D;
 	
 }
@@ -50,13 +51,15 @@ body {
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
+	border: 1px solid #813e13;
 	background-color: #A75521;
 	height: 20px;
 	width: 85px;
-	margin-top: 5px;
+	margin-top: 10px;
 	padding: 5px;
 	text-align: center;
 	a {
+		font-size: 1em !important;
 		color: #EEDFB7 !important;
 		font-weight: bold;		
 	}
@@ -69,14 +72,20 @@ body {
 .navbar-inner {
 	@include box-shadow(none !important);
 	border: 0;
+	a {
+		font-size: 1.25em;
+		text-transform: uppercase;
+	}
 }
 .well {
 	margin-top: 20px;
 	background-color: #EEDFB7;
 }
 .brand {
-	font-family: 'Satisfy', cursive;
-	font-size: 30px !important;
+	font-family: 'londrina_sketchregular', serif;
+	font-size: 40px !important;
+	text-transform: none !important;
+
 }
 
 .modal-body {
