@@ -45,6 +45,25 @@ body {
 	font-size: .75em;
 }
 
+.small-button {
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	background-color: #A75521;
+	height: 20px;
+	width: 85px;
+	margin-top: 5px;
+	padding: 5px;
+	text-align: center;
+	a {
+		color: white !important;
+		font-weight: bold;		
+	}
+	a:hover {
+		text-decoration: none;
+	}
+}
+
 /* Bootstrap overrides */
 .navbar-inner {
 	@include box-shadow(none !important);
