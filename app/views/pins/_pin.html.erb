@@ -22,6 +22,8 @@
   
   <div class="modal-body">
     <%= image_tag pin.image(:large) %>
+    <p><%= pin.description %></p>    
+    <span class="small"><%= link_to "Show Full Size", pin %></span>
   </div>
   <div class="modal-footer">
     <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>

@@ -41,6 +41,10 @@ body {
 	margin-top: -5px;
 }
 
+.small {
+	font-size: .75em;
+}
+
 /* Bootstrap overrides */
 .navbar-inner {
 	@include box-shadow(none !important);
@@ -53,6 +57,10 @@ body {
 .brand {
 	font-family: 'Satisfy', cursive;
 	font-size: 30px !important;
+}
+
+.modal-body {
+	max-height: 450px;
 }
 
 
