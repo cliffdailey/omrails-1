@@ -15,8 +15,9 @@
 	    <div class="alert alert-<%= name == :notice ? "success" : "error" %>">
 	      <a class="close" data-dismiss="alert">&#215;</a>
 	      <%= content_tag :div, msg, :id => "flash_#{name}" %>
-	    </div>
+	    </div>	    
 	  <% end %>
+
 	<% end %>	
 	
 	<%= yield %>		
@@ -31,6 +32,12 @@
 		$("#dropdown-login").click(function(e) { 
    		e.stopPropagation(); 
 		});
+	});
+</script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		// Fade out alert messages
+		$(".alert").fadeOut(4000);
 	});
 </script>
 </body>
