@@ -25,6 +25,13 @@
 
 <%= render 'layouts/footer' %>
 
-
+<script type="text/javascript">
+	$(document).ready(function(){
+		// Prevent closing the sign in form on click 
+		$("#dropdown-login").click(function(e) { 
+   		e.stopPropagation(); 
+		});
+	});
+</script>
 </body>
 </html>

@@ -1,0 +1,31 @@
+<ul id="dropdown-login" class="dropdown-menu" style="padding: 5px 10px 0 10px;">
+  <%= form_for("user", :url => new_user_session_path) do |f| %>
+    <li>
+      <div class="control-group">
+        <%= f.label :email, :class => "control-label" %>
+        <div class="controls">
+          <%= f.text_field :email %>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="control-group">
+        <%= f.label :password, :class => "control-label" %>
+        <div class="controls">
+          <%= f.password_field :password %>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="control-group">
+        <%= f.label :remember_me, :class => "control-label" %>
+        <div class="controls">
+          <%= f.check_box :remember_me %>
+        </div>
+      </div>
+    </li>
+    <li>
+      <%= f.submit "Login", :class=> "btn btn-primary" %>
+    </li>
+  <% end %>              
+</ul>
