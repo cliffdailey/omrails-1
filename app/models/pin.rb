@@ -10,7 +10,7 @@ class Pin < ActiveRecord::Base
   
   validates :description, presence: true
   validates :user_id, presence: true
-  validates_attachment :image, presence: true, content_type: { content_type: [ 'image/jpeg', 'image/jpg', 'image/png', 'image,gif']},
+  validates_attachment :image, presence: true, content_type: { content_type: [ 'image/jpeg', 'image/jpg', 'image/png', 'image,gif', 'image/JPG']},
   											size: { less_than: 5.megabytes }
 
   belongs_to :user
@@ -23,7 +23,7 @@ class Pin < ActiveRecord::Base
       Timeout::timeout(2) do
         io = open URI.parse(image_url)
         def io.original_filename
-          base_uri.path.split('/').last.scan(/([\w\.]*\.(?:png|jpe?g|gif|bmp))/).flatten.first
+          base_uri.path.split('/').last.scan(/([\w\.]*\.(?:png|jpe?g|gif|bmp|JPG|JPEG|BMP|GIF|PNG))/).flatten.first
         end
         self.image = io.original_filename.blank? ? nil : io
       end
