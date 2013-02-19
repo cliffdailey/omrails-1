@@ -7,6 +7,7 @@ gem 'simple_form'
 gem 'paperclip', '~> 3.0'
 gem 'aws-sdk'
 
+
 #database
 group :development, :test do
 	gem 'sqlite3'
