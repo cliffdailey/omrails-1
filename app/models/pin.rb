@@ -6,7 +6,6 @@ class Pin < ActiveRecord::Base
 
 	has_attached_file :image, :storage => :s3, :s3_credentials => S3_CREDENTIALS, styles: { large: '600x400>', medium: '320x240>', thumb: '100x100>'}
 
-	before_validation :remote_url_is_ssl, :if => lambda { |pin| pin.image_url.present? }
 	before_validation :download_remote_image, :if => lambda { |pin| pin.image_url.present? }  
   
   validates :description, presence: true
@@ -17,18 +16,15 @@ class Pin < ActiveRecord::Base
   belongs_to :user
   
   
-  private
-  def remote_url_is_ssl
-  	if self.image_url.match(/^https/)
-  		errors.add(:image_url, 'Secure image links are not allowed at this time.')
-  	end
-  end
+  private  
 
   def download_remote_image
-    return if self.image.present?
+    return if self.image.present? 
+    new_url = self.image_url.gsub(/https?:\/\//, "")   
     begin
       Timeout::timeout(2) do
-        io = open URI.parse(image_url)
+        
+        io = open URI.parse("http://" + new_url)
         def io.original_filename
           base_uri.path.split('/').last.scan(/([\w\.]*\.(?:png|jpe?g|gif|bmp|JPG|JPEG|BMP|GIF|PNG))/).flatten.first
         end
@@ -36,6 +32,7 @@ class Pin < ActiveRecord::Base
       end
     rescue Exception => e
       Rails.logger.error "Failed to download image from \"#{image_url}\": #{e.message}"
+      errors.add(:image_url, "There was an error downloading the image. Check the URL.")
     end
   end
 end
