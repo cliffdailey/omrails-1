@@ -22,7 +22,7 @@ class Pin < ActiveRecord::Base
     return if self.image.present? 
     new_url = self.image_url.gsub(/https?:\/\//, "")   
     begin
-      Timeout::timeout(2) do
+      Timeout::timeout(5) do
         
         io = open URI.parse("http://" + new_url)
         def io.original_filename
