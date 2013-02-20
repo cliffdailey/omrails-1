@@ -5,7 +5,7 @@
 	<p>
 	<p>
 		<strong>
-			by <%= pin.user.name %>
+			by <%= link_to "#{pin.user.name}", user_path(pin.user) %>
 		</strong>
 	<p>	
 	<% if current_user == pin.user %>
