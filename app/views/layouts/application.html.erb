@@ -24,21 +24,16 @@
 	
 </div>
 
-<%= render 'layouts/footer' %>
-
 <script type="text/javascript">
 	$(document).ready(function(){
 		// Prevent closing the sign in form on click 
 		$("#dropdown-login").click(function(e) { 
    		e.stopPropagation(); 
 		});
-	});
-</script>
-<script type="text/javascript">
-	$(document).ready(function(){
 		// Fade out alert messages
 		$(".alert").fadeOut(4000);
 	});
 </script>
+
 </body>
 </html>
