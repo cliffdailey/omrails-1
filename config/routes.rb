@@ -2,8 +2,9 @@ Omrails::Application.routes.draw do
 
   resources :pins
 
-  resources :users
+  
   devise_for :users
+  resources :users, :only => ['show', 'edit']
 
   get 'about' => 'pages#about'
   root :to => 'pins#index'
