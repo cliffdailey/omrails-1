@@ -19,3 +19,6 @@
 
 #Ignore s3 credentials yml
 /config/s3.yml
+
+#Ignore sampleimages folder used with Faker
+/sampleImages
