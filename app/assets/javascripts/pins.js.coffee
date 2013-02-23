@@ -1,6 +1,6 @@
 jQuery ->
   $("#pins").imagesLoaded -> 
-  	$('#pins').masonry itemSelector: ".box"
+  	$('#pins').masonry itemSelector: ".box"  
 
   if $(".pagination").length
     $(window).scroll ->

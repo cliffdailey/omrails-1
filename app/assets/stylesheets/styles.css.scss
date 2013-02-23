@@ -43,6 +43,15 @@ body {
 .small {
 	font-size: .75em;
 }
+#back_to_top {
+	position: fixed;
+	right: 0;
+	top: 150px;
+	display: block;
+}
+.no_display {
+	display: none;
+}
 
 
 /************************ Bootstrap Overrides ***************************/
@@ -193,6 +202,9 @@ h2 {
 		span {
 			font-size: 3.75em;
 		}
+	}
+	#back_to_top img {
+		display: none;
 	}
 }
 @media screen and (max-width: 655px) {
