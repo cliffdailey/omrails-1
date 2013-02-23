@@ -1,4 +1,4 @@
-/* fonts */
+/************************ Fonts ***************************/
 @import url(http://fonts.googleapis.com/css?family=Rock+Salt);
 @import url(http://fonts.googleapis.com/css?family=Oswald);
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
@@ -17,7 +17,7 @@ $baseFontFamily: Oxygen;
 
 @import url(http://fonts.googleapis.com/css?family=Oxygen);
 
-/* CSS Variables */
+/************************ CSS Variables ***************************/
 $btnPrimaryBackground: #0F851C;
 $navbarBackgroundHighlight: #EEDFB7;
 $navbarBackground: #EEDFB7;
@@ -27,27 +27,24 @@ $lightteal: #5CCCCC;
 $linkteal: #006363;
 $navbarHeight: 50px;
 
-/* Import bootstrap files */
+/************************ Import Bootstrap ***************************/
 @import 'bootstrap';
 @import 'bootstrap-responsive';
 
-/* General Styles */
+/************************ General Styles ***************************/
 
 body {
 	padding-top: 80px;
-	background-color: #E8B36D;
-	
+	background-color: #E8B36D;	
 }
-
 .plus-brown {
 	margin-top: -5px;
 }
-
 .small {
 	font-size: .75em;
 }
 
-/* Bootstrap overrides */
+/************************ Bootstrap Overrides ***************************/
 .navbar-inner {
 	@include box-shadow(none !important);
 	border: 0;
@@ -70,7 +67,7 @@ body {
 }
 
 
-/* Typography */
+/************************ Typography ***************************/
 
 h2 {
 	font-family: 'Oswald', sans-serif;
@@ -87,7 +84,7 @@ h2 {
 	border-radius: 5px;
 }
 
-/* Hero Unit Styles */
+/************************ Hero Unit ***************************/
 .hero-unit {
 	background-color: #A75521;
 	background-image: url(/assets/grid_overlay.png);
@@ -117,7 +114,22 @@ h2 {
 		}
 	}
 }
-/* Footer Styles */
+
+/************************ Pagination ***************************/
+.pagination {	
+	margin: 20px auto;
+	padding-top: 10px;
+	background-color: #B8B8B8;
+	width: 250px;
+	height: 30px;
+	border-radius: 4px;
+	text-align: center;
+	color: #202020;
+	font-weight: bold;
+	font-size: .85em
+}
+
+/************************ Footer Styles ***************************/
 .footer {
 	margin-top: 50px;
 	background-color: #A75521;
@@ -129,7 +141,7 @@ h2 {
 	}
 }
 
-/* Required for JQuery Masonry */
+/************************ JQuery Masonry ***************************/
 
 .box {
 	margin: 5px;

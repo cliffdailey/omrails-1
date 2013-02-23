@@ -1,6 +1,12 @@
-$('#pins').append('<%= j render(@pins) %>').masonry( 'reload' );
-<% if @pins.next_page %>
-	$('.pagination').replaceWith('<%= j will_paginate(@pins) %>')
-<% else %>
-	$('.pagination').remove();
-<% end %>
+setTimeout(
+  function() 
+  {
+  	$boxes = $('<%= j render(@pins) %>');
+    $('#pins').append( $boxes ).masonry( 'appended', $boxes );
+		<% if @pins.next_page %>
+			$('.pagination').replaceWith('<%= j will_paginate(@pins) %>')
+		<% else %>
+			$('.pagination').remove();
+		<% end %>
+  }, 1000);
+
