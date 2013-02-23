@@ -2,12 +2,12 @@
 	<%= link_to (image_tag pin.image(:medium)), "#myModal#{pin.id}", "data-toggle" => "modal" %>
 	<p class="description">
 		<%= pin.description %>
-	<p>
+	</p>
 	<p>
 		<strong>
 			by <%= link_to "#{pin.user.name}", user_path(pin.user) %>
 		</strong>
-	<p>	
+	</p>	
 	<% if current_user == pin.user %>
 		<p>
 		  <%= link_to 'Edit', edit_pin_path(pin) %> |

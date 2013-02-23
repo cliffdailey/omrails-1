@@ -6,7 +6,7 @@ gem 'devise'
 gem 'simple_form'
 gem 'paperclip', '~> 3.0'
 gem 'aws-sdk'
-gem 'will_paginate', '~> 3.0'
+gem 'kaminari'
 gem 'faker'
 
 

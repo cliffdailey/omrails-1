@@ -44,6 +44,7 @@ body {
 	font-size: .75em;
 }
 
+
 /************************ Bootstrap Overrides ***************************/
 .navbar-inner {
 	@include box-shadow(none !important);
@@ -113,6 +114,12 @@ h2 {
 			color: #ECDEB7;
 		}
 	}
+}
+
+/************************ Login ***************************/
+#dropdown-login {
+	border: 5px solid #D8D8D8;
+	 padding: 20px 20px 0 20px;
 }
 
 /************************ Pagination ***************************/
