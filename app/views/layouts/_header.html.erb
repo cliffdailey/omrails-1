@@ -16,16 +16,13 @@
  
       <!-- Everything you want hidden at 940px or less, place within here -->
       <div class="nav-collapse collapse">
-      	<ul class="nav">
-		      <li><%= link_to 'Home', root_path %></li>
-					<li><%= link_to 'About', about_path %></li>
-		    </ul>
+      	
 		    <ul class="nav pull-right">
           <% unless user_signed_in? %>   
             <li>         
-  		        <a data-toggle="modal" href="#loginModal">
+  		        <button class="btn btn-header" data-toggle="modal" href="#loginModal">
                 Login                
-              </a>              
+              </button>              
             </li>
           <% else %>
             <li>
@@ -34,8 +31,12 @@
                 <img class="plus-brown" src="/assets/plus-brown.png" alt="Add Pin" />                
               <% end %>
             </li>
-            <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
-            <li><%= link_to 'Logout', destroy_user_session_path, :method => 'delete' %></li>
+            <li><%= link_to "#{current_user.email}", edit_user_registration_path %></li>
+            <li>
+              <button class="btn btn-header">
+                <%= link_to 'Logout', destroy_user_session_path, :method => 'delete' %>
+              </button>
+            </li>            
           <% end %>
 		    </ul>        
       </div> 

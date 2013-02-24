@@ -1,4 +1,4 @@
-<div id="loginModal" data-backdrop="false" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div id="loginModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
     <h3 id="myModalLabel">Login</h3>
@@ -8,13 +8,13 @@
       <div class="control-group">
         <%= f.label :email, :class => "control-label" %>
         <div class="controls">
-          <%= f.text_field :email %>
+          <%= f.text_field :email, :class => 'input-block-level' %>
         </div>
       </div>
       <div class="control-group">
         <%= f.label :password, :class => "control-label" %>
         <div class="controls">
-          <%= f.password_field :password %>
+          <%= f.password_field :password, :class => 'input-block-level' %>
         </div>
       </div>
       <div class="control-group">
@@ -23,7 +23,8 @@
           <%= f.check_box :remember_me %>
         </div>
       </div>
-      <%= f.submit "Login", :class=> "btn btn-primary" %>
+      <%= f.submit "Login", :class=> "btn btn-primary" %>&nbsp;&nbsp;&nbsp;&nbsp;
+      <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
     <% end %>              
   </div>
   <div class="modal-footer">

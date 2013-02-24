@@ -29,13 +29,12 @@
 </div>
 
 <script type="text/javascript">
-	$(document).ready(function(){
-		// Prevent closing the sign in form on click 
-		$("#dropdown-login").click(function(e) { 
-   		e.stopPropagation(); 
-		});
-		// Fade out alert messages
-		$(".alert").fadeOut(4000);
+	$(document).ready(function(){		
+		// Slideup alert messages
+		setTimeout(function(){
+			$(".alert").slideUp();
+		}, 2000);
+		
 	});
 </script>
 
