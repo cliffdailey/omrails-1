@@ -1,6 +1,6 @@
 <div class="row">
 		<div class="well">
-			<p class="description">
+			<p class="pin_header">
 			  <%= @pin.description %>
 			</p>
 			<p>
@@ -9,9 +9,9 @@
 				<% end %>
 				<%= link_to 'Back', pins_path %>
 			</p>
-			<%= image_tag @pin.image %>			
-			<p>
-				<%= @pin.user.name %>
+			<%= image_tag @pin.image, :class => 'pin_image' %>			
+			<p class="caption">
+				<span>pinned by: &nbsp;</span><%= @pin.user.name %>
 			</p>		
 			
 			<div class="comment_header">
@@ -23,7 +23,7 @@
 				<% @pin.comments.each do |comment| %>		
 					<div class="comments">				
 						<p><%= comment.content %></p>
-						<span>~ <%= comment.user.email %></span>
+						<span>by <%= comment.user.name %> <%= time_ago_in_words(comment.created_at) %> ago</span>
 					</div>
 				<% end %>				
 			<% end %>
