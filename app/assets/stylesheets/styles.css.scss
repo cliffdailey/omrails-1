@@ -253,6 +253,10 @@ h2 {
 	#back_to_top img {
 		display: none;
 	}
+	#loginModal {
+		width: 300px;
+		left: 20px;
+	}
 }
 @media screen and (max-width: 655px) {
 	.logo-img { display: none; }	
