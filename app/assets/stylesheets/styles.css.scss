@@ -67,6 +67,31 @@ body {
 	z-index: 2000;
 }
 
+.comment_header {
+	margin-top: 20px;
+	p {
+		font-weight: bold;
+		font-size: 0.85em;
+	}
+}
+.comments {
+	border-bottom: 1px solid #d5a362;
+	background-color: #d5c59b;
+	padding: 10px;
+	p {
+		font-size: 0.85em;
+	}
+	span {
+		font-style: italic;
+		font-size: 0.75em;
+		padding-left: 15px;
+		color: #666;
+	}
+}
+.right {
+	text-align: right;
+}
+
 /************************ Buttons **************************************/
 .btn-header {
   background-color: hsl(22, 78%, 34%) !important;
@@ -229,6 +254,8 @@ h2 {
 }
 
 .description {
+	font-size: 1.5em;
+	font-weight: bold;
 	text-align: center;
 	font-style: italic;
 	margin-bottom: 20px;

@@ -14,6 +14,7 @@ class Pin < ActiveRecord::Base
   											size: { less_than: 5.megabytes }, :if => Proc.new{|pin| pin.errors.empty?}
 
   belongs_to :user
+  has_many :comments
   
   
   private  

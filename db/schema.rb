@@ -11,7 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130213223418) do
+ActiveRecord::Schema.define(:version => 20130224184904) do
+
+  create_table "comments", :force => true do |t|
+    t.integer  "pin_id"
+    t.text     "content"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.integer  "user_id"
+  end
 
   create_table "pins", :force => true do |t|
     t.string   "description"

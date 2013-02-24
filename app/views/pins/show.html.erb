@@ -1,17 +1,55 @@
 <div class="row">
 		<div class="well">
-			<%= image_tag @pin.image %>
-			<p>
+			<p class="description">
 			  <%= @pin.description %>
 			</p>
 			<p>
-				<%= @pin.user.name %>
+				<% if current_user == @pin.user %>
+					<%= link_to 'Edit', edit_pin_path(@pin) %> |
+				<% end %>
+				<%= link_to 'Back', pins_path %>
 			</p>
-			<% if current_user == @pin.user %>
-				<%= link_to 'Edit', edit_pin_path(@pin) %> |
+			<%= image_tag @pin.image %>			
+			<p>
+				<%= @pin.user.name %>
+			</p>		
+			
+			<div class="comment_header">
+				<p>Comments:</p>
+			</div>
+			<% if @pin.comments.blank? %>			
+				<p>No comments yet for this pin.</p>				
+			<% else %>				
+				<% @pin.comments.each do |comment| %>		
+					<div class="comments">				
+						<p><%= comment.content %></p>
+						<span>~ <%= comment.user.email %></span>
+					</div>
+				<% end %>				
 			<% end %>
-			<%= link_to 'Back', pins_path %>
+			<% if user_signed_in? %>
+				<div class="comment_header">
+					<p>Add Comment:</p>
+				</div>
+				<span class="comment">
+		    	<%= form_for([@pin, @pin.comments.build]) do |f| %>
+		    		<div class="field">
+		    			<%= f.label 'Comment' %><br />
+		    			<%= f.text_area :content, :cols => "30", :rows => "3" %>
+		    		</div>
+		    		<%= f.hidden_field :user_id, :value => current_user.id %>
+		    		<div class="actions">
+		    			<%= f.submit "Add Comment", :class => "btn btn-header" %>
+		    		</div>
+		    	<% end %>
+	    	</span>
+    	<% else %>
+	    	<div class="comment_header">
+	    		<%= link_to 'Sign in', new_user_session_path %> to post comments.
+	    	</div>			
+	    <% end %>
 		</div>
+
 </div>
 
 
