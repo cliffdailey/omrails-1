@@ -33,8 +33,8 @@
             </li>
             <li><%= link_to "#{current_user.email}", edit_user_registration_path %></li>
             <li>
-              <button class="btn btn-header">
-                <%= link_to 'Logout', destroy_user_session_path, :method => 'delete' %>
+              <button class="btn btn-header logoutButton">
+                <%= link_to 'Logout', destroy_user_session_path, :method => 'delete', :class => 'logoutLink' %>
               </button>
             </li>            
           <% end %>
