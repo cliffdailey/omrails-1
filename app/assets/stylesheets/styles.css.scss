@@ -63,6 +63,9 @@ body {
 	float: left;
 	padding-left: 20px;
 }
+#login-modal {
+	z-index: 2000;
+}
 
 
 /************************ Bootstrap Overrides ***************************/
