@@ -22,10 +22,9 @@
 		    </ul>
 		    <ul class="nav pull-right">
           <% unless user_signed_in? %>   
-            <li class="dropdown">         
-  		        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                Login
-                <span class="caret"></span>
+            <li>         
+  		        <a data-toggle="modal" href="#loginModal">
+                Login                
               </a>
               <%= render 'layouts/login' %>
             </li>
