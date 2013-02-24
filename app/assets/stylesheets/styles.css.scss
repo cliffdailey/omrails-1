@@ -52,6 +52,17 @@ body {
 .no_display {
 	display: none;
 }
+.avatar {
+	border: 5px solid white;
+	border-radius: 5px;
+	width: 120px;
+	float: left;
+	margin-bottom: 30px;
+}
+.user-info {
+	float: left;
+	padding-left: 20px;
+}
 
 
 /************************ Bootstrap Overrides ***************************/
@@ -83,7 +94,7 @@ h2 {
 	font-family: 'Oswald', sans-serif;
 	font-weight: normal;
 	font-size: 3em;
-	color: white;
+	color: #A75521;
 }
 
 /* Forms */
@@ -158,6 +169,9 @@ h2 {
 }
 
 /************************ JQuery Masonry ***************************/
+#pins {
+	clear: both;
+}
 
 .box {
 	margin: 5px;
