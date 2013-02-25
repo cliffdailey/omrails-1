@@ -205,6 +205,8 @@ h2 {
 
 /************************ Login ***************************/
 #loginModal {
+	position: fixed;
+	top: 300px;
 	width: 400px;
 	left: 55%;
 }
