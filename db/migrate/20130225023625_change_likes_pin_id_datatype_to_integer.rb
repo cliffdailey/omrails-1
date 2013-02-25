@@ -1,13 +1,13 @@
 class ChangeLikesPinIdDatatypeToInteger < ActiveRecord::Migration
   def self.up
-    change_table :likes do |t|
-      t.change :pin_id, :integer
-    end
+   connection.execute(%q{
+    alter table likes
+    alter column pin_id
+    type integer using cast(number as integer)
+  })
   end
  
   def self.down
-    change_table :likes do |t|
-      t.change :pin_id, :string
-    end
+    
   end
 end
