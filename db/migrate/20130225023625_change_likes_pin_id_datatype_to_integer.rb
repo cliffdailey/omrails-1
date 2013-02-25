@@ -3,7 +3,7 @@ class ChangeLikesPinIdDatatypeToInteger < ActiveRecord::Migration
    connection.execute(%q{
     alter table likes
     alter column pin_id
-    type integer using cast(number as integer)
+    type integer using cast(pin_id as integer)
   })
   end
  
