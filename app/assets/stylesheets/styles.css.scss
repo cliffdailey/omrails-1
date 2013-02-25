@@ -63,10 +63,6 @@ body {
 	float: left;
 	padding-left: 20px;
 }
-#login-modal {
-	z-index: 2000;
-}
-
 .comment_header {
 	margin-top: 20px;
 	p {
@@ -206,7 +202,7 @@ h2 {
 /************************ Login ***************************/
 #loginModal {
 	position: fixed;
-	top: 225px;
+	height: 300px;
 	width: 400px;
 	left: 55%;
 }
