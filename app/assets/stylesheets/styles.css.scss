@@ -91,6 +91,18 @@ body {
 .right {
 	text-align: right;
 }
+.icon-black-star {
+    background-image: url(black_star.png);
+    background-position: center center;
+    height: 14px;
+    width: 14px;
+}
+.icon-gold-star {
+    background-image: url(gold_star.png);
+    background-position: center center;
+    height: 14px;
+    width: 14px;
+}
 
 /************************ Buttons **************************************/
 .btn-header {

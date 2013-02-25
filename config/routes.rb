@@ -1,7 +1,7 @@
 Omrails::Application.routes.draw do
-
+  resources :likes
   resources :pins do
-    resources :comments
+    resources :comments    
   end
   
   devise_for :users
