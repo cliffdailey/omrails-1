@@ -17,7 +17,7 @@
 		</p>
 	<% end %>
 	<% if user_signed_in? %>
-		<div class="like_star">
+		<div class="like_star_<%= pin.id %>">
 			<% unless pin.liking_users.include? current_user  %>
 				<%= link_to likes_path(:pin_id => pin), :method => :post do %>
 					<i id="star_<%= pin.id %>" class="icon icon-black-star"></i>
