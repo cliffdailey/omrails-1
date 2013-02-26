@@ -5,12 +5,10 @@
 	<p><strong>by <%= link_to "#{pin.user.name}", user_path(pin.user) %></strong></p>	
 	<p><%= link_to (pluralize(pin.comments.count, 'comment')), pin %></p>		
 
-	<!-- Like options for signed-in users -->
-	<% if user_signed_in? %>
-		<div id="like_star_<%= pin.id %>">
-			<%= render 'pins/star', :pin => pin %>
-		</div>
-	<% end %>
+	<!-- Like options for signed-in users -->	
+	<div id="like_star_<%= pin.id %>">
+		<%= render 'pins/star', :pin => pin %>
+	</div>	
 
 	<!-- Edit options for image owner -->
 	<% if current_user == pin.user %>
