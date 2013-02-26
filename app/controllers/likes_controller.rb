@@ -9,6 +9,7 @@ class LikesController < ApplicationController
 		if !@pin.liking_users.include? current_user && @like.save
 			respond_to do |format|
 	      format.html { redirect_to root_url }
+	      format.js
     	end
 		else
 			flash[:alert] = "Unable to like pin."
@@ -17,7 +18,12 @@ class LikesController < ApplicationController
 	end
 	def destroy
 		@like = Like.find(params[:id])
-		@like.destroy
-		redirect_to root_url
+		@pin = @like.pin
+		if @like.destroy
+			respond_to do |format|
+	      format.html { redirect_to root_url }
+	      format.js
+    	end
+    end
 	end
 end

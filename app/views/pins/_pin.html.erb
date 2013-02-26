@@ -3,8 +3,14 @@
 	<%= link_to (image_tag pin.image(:medium)), "#myModal#{pin.id}", "data-toggle" => "modal" %>
 	<p class="description"><%= pin.description %></p>
 	<p><strong>by <%= link_to "#{pin.user.name}", user_path(pin.user) %></strong></p>	
-	<p><%= link_to (pluralize(pin.comments.count, 'comment')), pin %></p>
-	<p><%= pluralize(pin.likes.count, 'like') %></p>
+	<p><%= link_to (pluralize(pin.comments.count, 'comment')), pin %></p>		
+
+	<!-- Like options for signed-in users -->
+	<% if user_signed_in? %>
+		<div id="like_star_<%= pin.id %>">
+			<%= render 'pins/star', :pin => pin %>
+		</div>
+	<% end %>
 
 	<!-- Edit options for image owner -->
 	<% if current_user == pin.user %>
@@ -12,22 +18,6 @@
 		  <%= link_to 'Edit', edit_pin_path(pin) %> |
 		  <%= link_to 'Delete', pin, method: :delete, data: { confirm: 'Are you sure?' } %>
 		</p>
-	<% end %>
-
-	<!-- Like options for signed-in users -->
-	<% if user_signed_in? %>
-		<div class="like_star_<%= pin.id %>">
-			<% unless pin.liking_users.include? current_user  %>
-				<%= link_to likes_path(:pin_id => pin), :method => :post do %>
-					<i id="star_<%= pin.id %>" class="icon icon-black-star"></i>
-				<% end %>
-			<% else %>		
-			<% like = current_user.likes.find_by_pin_id(pin.id) %>
-				<%= link_to like_path(like), :method => :delete do %>
-					<i id="star_<%= pin.id %>" class="icon icon-gold-star"></i>
-				<% end %>	
-			<% end %>
-		</div>
 	<% end %>
 
 </div><!-- End box -->
