@@ -27,7 +27,7 @@ $lightteal: #5CCCCC;
 $linkteal: #006363;
 $navbarHeight: 50px;
 
-/************************ Import Bootstrap ***************************/
+/************************ Import Bootstrap ********************************/
 @import 'bootstrap';
 @import 'bootstrap-responsive';
 
@@ -43,12 +43,6 @@ body {
 .small {
 	font-size: .75em;
 }
-#back_to_top {
-	position: fixed;
-	right: 0;
-	top: 150px;
-	display: block;
-}
 .no_display {
 	display: none;
 }
@@ -59,34 +53,8 @@ body {
 	float: left;
 	margin-bottom: 30px;
 }
-.user-info {
-	float: left;
-	padding-left: 20px;
-}
-.comment_header {
-	margin-top: 20px;
-	p {
-		font-weight: bold;
-		font-size: 0.85em;
-	}
-}
-.comments {
-	border-bottom: 1px solid #d5a362;
-	background-color: #d5c59b;
-	padding: 10px;
-	p {
-		font-size: 0.85em;
-	}
-	span {
-		font-style: italic;
-		font-size: 0.80em;
-		padding-left: 15px;
-		color: #555;
-	}
-}
-.right {
-	text-align: right;
-}
+
+/************************Custom Icons for Bootstrap ***********************/
 .icon-black-star {
     background-image: url(black_star.png);
     background-position: center center;
@@ -98,6 +66,14 @@ body {
     background-position: center center;
     height: 14px;
     width: 14px;
+}
+
+/************************ Back-to-top Style ********************************/
+#back_to_top {
+	position: fixed;
+	right: 0;
+	top: 150px;
+	display: block;
 }
 
 /************************ Buttons **************************************/
@@ -202,7 +178,7 @@ h2 {
 /************************ Login ***************************/
 #loginModal {
 	position: fixed;
-	height: 300px;
+	height: 320px;
 	width: 400px;
 	left: 55%;
 }
@@ -243,7 +219,7 @@ h2 {
 	}
 }
 
-/************************ JQuery Masonry ***************************/
+/************************ Image Display & User Profile**************/
 #pins {
 	clear: both;
 }
@@ -294,8 +270,33 @@ h2 {
 	border-bottom: 1px solid #d5a362;
 	padding-bottom: 10px;
 }
+.comment_header {
+	margin-top: 20px;
+	p {
+		font-weight: bold;
+		font-size: 0.85em;
+	}
+}
+.comments {
+	border-bottom: 1px solid #d5a362;
+	background-color: #d5c59b;
+	padding: 10px;
+	p {
+		font-size: 0.85em;
+	}
+	span {
+		font-style: italic;
+		font-size: 0.80em;
+		padding-left: 15px;
+		color: #555;
+	}
+}
+.user-info {
+	float: left;
+	padding-left: 20px;
+}
 
-/* Media Queries */
+/********************** Media Queries **************************/
 @media screen and (max-width: 979px) {
 	body {
 		padding-top: 0;
