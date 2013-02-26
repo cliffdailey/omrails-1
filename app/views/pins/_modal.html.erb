@@ -1,0 +1,14 @@
+<div id="myModal<%= pin.id %>" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">  
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>  
+    <h3 id="myModalLabel">&nbsp;</h3>
+  </div>
+  <div class="modal-body">
+    <%= image_tag pin.image(:large) %>
+    <p><%= pin.description %></p>    
+    <span class="small"><%= link_to "Show Full Size", pin %></span>    
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+  </div>
+</div>

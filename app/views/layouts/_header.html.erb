@@ -9,14 +9,13 @@
         <span class="icon-bar"></span>
       </a>
  
-      <!-- Be sure to leave the brand out there if you want it shown -->
+      <!-- Website Logo/Brand -->
       <%= link_to root_path, class: "brand" do %>
         quick<span>PINS</span>
       <% end %>
  
-      <!-- Everything you want hidden at 940px or less, place within here -->
+      <!-- Collapsible Navigation Elements -->
       <div class="nav-collapse collapse">
-      	
 		    <ul class="nav pull-right">
           <% unless user_signed_in? %>   
             <li>         
@@ -48,9 +47,10 @@
               </button>
             </li>            
           <% end %>
-		    </ul>        
-      </div> 
-    </div>
-  </div>
-</div>
+		    </ul> 
+      </div><!-- End nav-collapse -->
+      
+    </div><!-- End container -->
+  </div><!-- End navbar inner -->
+</div><!-- End navbar -->
 

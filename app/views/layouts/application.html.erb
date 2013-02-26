@@ -24,17 +24,15 @@
 	<%= yield %>	
 	<div id="back_to_top">
 		<%= link_to (image_tag 'back-to-top.png'), '#' %>
-	</div>	
-	
-</div>
+	</div>		
+</div><!-- End container -->
 
 <script type="text/javascript">
 	$(document).ready(function(){		
-		// Slideup alert messages
+		/////////////// Hide alert messages after 2 seconds////////////////////
 		setTimeout(function(){
 			$(".alert").slideUp();
-		}, 2000);
-		
+		}, 2000);		
 	});
 </script>
 

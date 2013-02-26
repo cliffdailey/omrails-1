@@ -1,4 +1,0 @@
-
-var link = "<%= j link_to like_path(like), :method => :delete, :remote => :true  { <i id='star_<%= pin.id %>' class='icon icon-gold-star'></i> } %>";
-alert( ".like_star_<%= j @pin.id.to_s %>");
-$('.like_star_<%= j @pin.id.to_s %>').replaceWith( link );
