@@ -6,8 +6,10 @@
 	  <%= f.full_error :image_content_type, class: 'alert alert-error' %>
 	  
 	  <!-- Form inputs -->
-	  <%= f.input :image, label: 'Upload an image' %>
-		<%= f.input :image_url, label: 'or enter an image URL'%>	  
+	  <% unless params[:action] == 'edit' %>
+		  <%= f.input :image, label: 'Upload an image' %>
+			<%= f.input :image_url, label: 'or enter an image URL'%>	 
+		<% end %> 
 	  <%= f.input :description, as: :text, input_html: { rows: '3'} %>
 
 	  <div class="form-actions">
