@@ -1,12 +1,12 @@
 class PinsController < ApplicationController
   before_filter :authenticate_user!, except: [:index, :show]
+  before_filter :get_resource, only: [:edit, :update, :destroy]
 
 
   # GET /pins
   # GET /pins.json
   def index
     @pins = Pin.order("created_at desc").page params[:page]
-
     respond_to do |format|
       format.html # index.html.erb
       format.js
@@ -28,7 +28,6 @@ class PinsController < ApplicationController
   # GET /pins/new.json
   def new
     @pin = current_user.pins.new
-
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @pin }
@@ -37,14 +36,12 @@ class PinsController < ApplicationController
 
   # GET /pins/1/edit
   def edit
-    @pin = current_user.pins.find(params[:id])
   end
 
   # POST /pins
   # POST /pins.json
   def create
     @pin = current_user.pins.new(params[:pin])
-
     respond_to do |format|
       if @pin.save
         format.html { redirect_to @pin, notice: 'Pin was successfully created.' }
@@ -59,8 +56,6 @@ class PinsController < ApplicationController
   # PUT /pins/1
   # PUT /pins/1.json
   def update
-    @pin = current_user.pins.find(params[:id])
-
     respond_to do |format|
       if @pin.update_attributes(params[:pin])
         format.html { redirect_to @pin, notice: 'Pin was successfully updated.' }
@@ -74,13 +69,20 @@ class PinsController < ApplicationController
 
   # DELETE /pins/1
   # DELETE /pins/1.json
-  def destroy
-    @pin = current_user.pins.find(params[:id])
+  def destroy    
     @pin.destroy
-
     respond_to do |format|
       format.html { redirect_to pins_url }
       format.json { head :no_content }
+    end
+  end
+
+  private
+
+  def get_resource
+    @pin = Pin.find(params[:id])
+    unless @pin.user == current_user
+      redirect_to root_url, alert: 'Not authorized for this action.'
     end
   end
 end
