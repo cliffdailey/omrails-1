@@ -8,6 +8,7 @@ gem 'paperclip', '~> 3.0'
 gem 'aws-sdk'
 gem 'kaminari'
 gem 'faker'
+gem 'activeadmin'
 
 
 #database
