@@ -1,6 +1,5 @@
 <!-- Show website-welcome unless user is signed in -->
-<% unless user_signed_in? %>
-	<div class="hero-unit">	
+<div class="container">	
 		<h1>quick</h1><span>pins <%= image_tag '/assets/thumbtack5.png', class: 'logo-img' %></span>
 		<p>
 			Welcome to
@@ -8,7 +7,6 @@
 			Click the button below to sign up and start pinning!
 		</p>
 		<p><%= link_to 'Sign Up Now!', new_user_registration_path, class: 'btn btn-primary btn-large' %></p>
-	</div>
-<% end %>
+</div>
 
 
