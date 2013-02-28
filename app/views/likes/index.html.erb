@@ -10,9 +10,7 @@
 		<% @pins.each do |pin| %>
 			<div class="box">
 				<%= link_to (image_tag pin.image(:medium)), "#myModal#{pin.id}", "data-toggle" => "modal" %>
-				<p class="description">
-					<%= pin.description %>
-				</p>
+				<p class="description"><%= pin.description %></p>
 				<p>
 					<strong>
 						by <%= link_to "#{pin.user.name}", user_path(pin.user) %>
@@ -23,7 +21,7 @@
 			</div>
 
 			<!-- Modal Window for Images-->
-			<%= render 'likes/modal', :pin => pin %>
+			<%= render 'pins/modal', :pin => pin %>
 			
 		<% end %>
 	<% else %>

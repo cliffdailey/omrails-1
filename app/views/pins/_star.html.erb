@@ -6,8 +6,7 @@
 			<i id="star_<%= pin.id %>" class="icon icon-black-star"></i>
 		<% end %>
 	<% else %>		
-		<% like = current_user.likes.find_by_pin_id(pin.id) %>
-		<%= link_to like_path(like), :method => :delete, :remote => true do %>
+		<%= link_to like_path(user_like(pin.id)), :method => :delete, :remote => true do %>
 			<i id="star_<%= pin.id %>" class="icon icon-gold-star"></i>
 		<% end %>	
 	<% end %>
