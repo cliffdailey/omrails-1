@@ -1,7 +1,6 @@
 /************************ Fonts ***************************/
-@import url(http://fonts.googleapis.com/css?family=Rock+Salt);
 @import url(http://fonts.googleapis.com/css?family=Oswald);
-@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+@import url(http://fonts.googleapis.com/css?family=Acme);
 $baseFontFamily: Oxygen;
 @font-face {
     font-family: 'londrina_sketchregular';
@@ -12,7 +11,6 @@ $baseFontFamily: Oxygen;
          url('londrinasketch-regular-webfont.svg#londrina_sketchregular') format('svg');
     font-weight: normal;
     font-style: normal;
-
 }
 
 @import url(http://fonts.googleapis.com/css?family=Oxygen);
@@ -118,8 +116,8 @@ body {
 	background-color: #EEDFB7;
 }
 .brand {
-	font-family: 'londrina_sketchregular', serif;
-	font-size: 40px !important;
+	font-family: 'Acme', serif;
+	font-size: 2.5em !important;
 	text-transform: none !important;
 }
 .modal-body {
@@ -147,33 +145,44 @@ h2 {
 /************************ Hero Unit ***************************/
 .hero-unit {
 	background-color: #A75521;
-	background-image: url(/assets/grid_overlay.png);
+	background-image: url(/assets/square_overlay.png);
 	min-height: 100px !important;
-	padding-top: 35px;
+	padding-top: 20px;
 	padding-bottom: 20px;
-	box-shadow: 4px 4px 8px #444;
+	border-top: 6px solid #EEDFB6;
+	border-bottom: 6px solid #EEDFB6;
+	box-shadow: 
+        0px 11px 11px -11px #444,
+        0px -10px 11px -11px #444;
+
+	
 	h1 { 
-		font-family: 'londrina_sketchregular', serif;
+		font-family: 'Acme', sans-serif;
 		font-weight: 400;
 		font-size: 4em;
 		color: #EEDFB7;		
 		display: inline;
+		text-shadow: -1px -1px 0 hsl(27, 0%, 17%),
+             -2px -2px 1px hsl(27, 0%, 17%);
 	}
 	span {
-		font-family: 'londrina_sketchregular', serif;
-		font-size: 6em;
+		font-family: 'Acme', sans-serif;
+		font-size: 5em;
 		text-transform: uppercase;
 		color: #EEDFB7;
+		text-shadow: -1px -1px 0 hsl(3, 0%, 29%),
+             -2px -2px 1px hsl(3, 0%, 29%);
 	}
 	p {
 		color: white;
-		margin-top: 1.25em;
+		margin-top: 0;
 		a {
 			font-family: $baseFontFamily;
 			color: #ECDEB7;
 		}
 	}
 }
+
 
 /************************ Login ***************************/
 #loginModal {
