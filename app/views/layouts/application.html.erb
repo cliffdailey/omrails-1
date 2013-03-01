@@ -15,11 +15,6 @@
 <div class="container">
 	<%= render 'layouts/messages' %>
 </div>
-<% unless user_signed_in? %>
-	<div class="welcome">
-		<%= render 'pages/home' %>
-	</div>
-<% end %>
 <div class="container">			
 	<%= yield %>	
 	<div id="back_to_top">

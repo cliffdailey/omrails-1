@@ -22,3 +22,6 @@
 
 #Ignore sampleimages folder used with Faker
 /sampleimages
+
+#Ignore facebook credentials yml
+/config/facebook.yml

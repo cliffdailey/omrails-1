@@ -1,12 +1,19 @@
 <!-- Show website-welcome unless user is signed in -->
-<div class="container">	
-		<h1>quick</h1><span>pins <%= image_tag '/assets/thumbtack5.png', class: 'logo-img' %></span>
-		<p>
-			Welcome to
-			<%= link_to 'QuickPins!', 'http://onemonthrails.com' %>
-			Click the button below to sign up and start pinning!
-		</p>
-		<p><%= link_to 'Sign Up Now!', new_user_registration_path, class: 'btn btn-primary btn-large' %></p>
-</div>
+<% unless user_signed_in? %>
+	<div class="welcome">
+		<div class="container">	
+			<h1>quick</h1><span>pins <%= image_tag '/assets/thumbtack5.png', class: 'logo-img' %></span>
+			<p>
+				Welcome to
+				<%= link_to 'QuickPins!', 'http://onemonthrails.com' %>
+				Click the button below to sign up and start pinning!
+			</p>
+			<p><%= link_to 'Sign Up Now!', new_user_registration_path, class: 'btn btn-primary' %></p>		
+		</div>
+	</div>
+<% end %>
+
+
+
 
 

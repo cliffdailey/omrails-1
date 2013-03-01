@@ -7,6 +7,7 @@ Omrails::Application.routes.draw do
   end
   
   devise_for :users
+
   resources :users, :only => ['show', 'edit']
 
   get 'about' => 'pages#about'

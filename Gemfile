@@ -10,6 +10,7 @@ gem 'kaminari'
 gem 'faker'
 
 
+
 #database
 group :development, :test do
 	gem 'sqlite3'
