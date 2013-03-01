@@ -354,7 +354,7 @@ h2 {
 }
 
 @media screen and (max-width: 490px) {
-	.hero-unit {
+	.welcome {
 		h1 {
 			font-size: 2.5em;
 		}
@@ -370,8 +370,13 @@ h2 {
 		left: 20px;
 	}
 }
+@media screen and (max-width: 800px) {
+	.welcome .container{ padding-left: 20px; }	
+}
 @media screen and (max-width: 655px) {
 	.logo-img { display: none; }	
+	p { padding-top: 20px }
+
 }
 
 
