@@ -25,3 +25,6 @@
 
 #Ignore facebook credentials yml
 /config/facebook.yml
+
+# Ignore application configuration
+/config/application.yml

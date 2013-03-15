@@ -8,7 +8,9 @@ gem 'paperclip', '~> 3.0'
 gem 'aws-sdk'
 gem 'kaminari'
 gem 'faker'
-
+gem 'figaro'
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'
 
 
 #database

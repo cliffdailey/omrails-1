@@ -25,6 +25,7 @@
       </div>
       <%= f.submit "Login", :class=> "btn btn-primary" %>&nbsp;&nbsp;&nbsp;&nbsp;
       <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
-    <% end %>            
+    <% end %>  
+    <%= link_to "or Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>          
   </div>  
 </div>
